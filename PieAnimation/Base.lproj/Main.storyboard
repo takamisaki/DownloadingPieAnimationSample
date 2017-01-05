@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IBh-R5-qCW">
+                                <rect key="frame" x="58" y="390" width="204" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进度条" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KlY-eg-eL3">
+                                <rect key="frame" x="134.5" y="430" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GTA.png" translatesAutoresizingMaskIntoConstraints="NO" id="8u2-JR-zVW">
+                                <rect key="frame" x="60" y="140" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.45882352939999999" blue="0.63921568630000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L33-qf-hoU">
+                                <rect key="frame" x="60" y="345" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IBh-R5-qCW" firstAttribute="trailing" secondItem="8u2-JR-zVW" secondAttribute="trailing" id="58L-69-ak6"/>
+                            <constraint firstItem="KlY-eg-eL3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Air-Nz-fdH"/>
+                            <constraint firstItem="L33-qf-hoU" firstAttribute="trailing" secondItem="8u2-JR-zVW" secondAttribute="trailing" id="Kr7-VL-UBi"/>
+                            <constraint firstItem="8u2-JR-zVW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mzl-0k-KUc"/>
+                            <constraint firstItem="L33-qf-hoU" firstAttribute="leading" secondItem="8u2-JR-zVW" secondAttribute="leading" id="PyT-Xe-tfl"/>
+                            <constraint firstItem="IBh-R5-qCW" firstAttribute="leading" secondItem="8u2-JR-zVW" secondAttribute="leading" id="UWa-2I-bKe"/>
+                            <constraint firstItem="IBh-R5-qCW" firstAttribute="top" secondItem="8u2-JR-zVW" secondAttribute="bottom" constant="50" id="bLm-P7-hgh"/>
+                            <constraint firstItem="KlY-eg-eL3" firstAttribute="top" secondItem="IBh-R5-qCW" secondAttribute="bottom" constant="10" id="cMr-d3-o0G"/>
+                            <constraint firstItem="8u2-JR-zVW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gh1-VF-ufY"/>
+                            <constraint firstItem="L33-qf-hoU" firstAttribute="top" secondItem="8u2-JR-zVW" secondAttribute="bottom" constant="5" id="krH-FW-NHA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="appName" destination="L33-qf-hoU" id="9Xp-NU-CEI"/>
+                        <outlet property="iconView" destination="8u2-JR-zVW" id="GT5-Al-cGR"/>
+                        <outlet property="processSlider" destination="IBh-R5-qCW" id="hYW-gL-CAG"/>
+                        <outlet property="textLabel" destination="KlY-eg-eL3" id="1Je-f9-CLA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="445" y="425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GTA.png" width="200" height="200"/>
+    </resources>
+</document>
